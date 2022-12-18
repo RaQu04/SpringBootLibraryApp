@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj książkę do biblioteki</title>
+    <link rel="Stylesheet" href="style.css" type="text/css"/>
+</head>
+
+<body class="form_exe">
+
+    <h1 >Witam w aplikacji biblioteki domowej! </h1>
+
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="#">Przeglądaj</a>
+        <a href="#">Dodaj książkę</a>
+        <a href="new_account.html">Zarejestruj się</a>
+        <a href="#">Zaloguj się</a>
+        <div class="animation start-home"></div>
+
+    </nav>
+
+    <br>
+
+    <h3 class="h_form">Dodaj książkę</h3>
+    <form class="form" action="skrypt.php" method="post" enctype="multipart/form-data" autocomplete="on">
+        <fieldset>
+            <legend>Dane ksiązki</legend>
+            <label for="tytul">Tytuł książki</label>
+            <input type="text" size="12" id="tytul" minlength="3" maxlength="20" required autofocus
+                placeholder="np. Krzyżacy">
+            <br>
+            <br>
+            <label for="autor">Autor</label>
+            <input type="text" name="autor" id="autor" minlength="2" required placeholder="np. Henryk Sienkiewicz">
+            <br>
+            <br>
+            <label for="wydawca">Wydawca</label>
+            <input type="text" name="wydawca" id="wydawca" minlength="2" required
+                placeholder="np. Warszawa : Monolith Films">
+            <br>
+            <br>
+            <label for="kategoria">Kategoria</label>
+            <input type="text" name="kategoria" id="kategoria" minlength="2" required
+                placeholder="np. Komedia">
+            <br>
+            <br>
+            <label for="rok_wydania">Rok wydania</label>
+            <input type="number" name="rok_wydania" id="rok_wydania" required pattern="[0-9]{4}"
+                title="Niepoprawna wartość.">
+            <br>
+
+        </fieldset>
+        <button type="submit">Zapisz</button>
+        <button type="reset">Wypełnij ponownie</button>
+    </form>
+</body>
+
+</html>

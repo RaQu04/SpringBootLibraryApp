@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz rejestracji</title>
+    <link rel="Stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body class="form_exe">
+    <h1>Witam w aplikacji biblioteki domowej! </h1>
+
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="#">Przeglądaj</a>
+        <a href="new_book.html">Dodaj książkę</a>
+        <a href="new_account.html">Zarejestruj się</a>
+        <a href="#">Zaloguj się</a>
+        <div class="animation start-home"></div>
+
+    </nav>
+    <br>
+
+
+
+    <h3 class="h_form">Utwórz konto</h3>
+    <form class="form" action="skrypt.php" method="post" enctype="multipart/form-data" autocomplete="on">
+        <fieldset>
+            <legend>Twoje dane</legend>
+            <label for="imie">Imię lub nick</label>
+            <input type="text" size="12" id="imie" minlength="3" maxlength="20" required autofocus
+                placeholder="np. Jan">
+            <br>
+            <br>
+            <label for="haslo">Hasło</label>
+            <input type="password" name="haslo" id="haslo" minlength="8" required placeholder="np. @za!@34sSMA">
+            <br>
+            <br>
+            <label for="haslo_powtorzone">Powtórz hasło</label>
+            <input type="password" name="haslo_powtorzone" id="haslo_powtorzone" minlength="8" required>
+            <br>
+            <br>
+            <label for="numer_telefonu">Numer telefonu</label>
+            <input type="tel" name="numer_telefonu" id="numer_telefonu" required pattern="[0-9]{9}"
+                title="Niepoprawna wartość.">
+            <br>
+            <br>
+            <label for="data_urodzenia">Data urodzenia</label>
+            <input type="date" name="data_urodzenia" id="data_urodzenia" min="1918-11-11">
+            <br>
+            <br>
+            <label>Płeć</label>
+            <input type="radio" id="man_choice" name="plec" value="Mężczyzna">
+            <label for="man_choice">Mężczyzna</label>
+            <input type="radio" id="woman_choice" name="plec" value="Kobieta" checked>
+            <label for="woman_choice">Kobieta</label>
+
+            <br>
+            <br>
+
+        </fieldset>
+        <button type="submit">Zapisz</button>
+        <button type="reset">Wypełnij ponownie</button>
+    </form>
+</body>
+
+</html>
