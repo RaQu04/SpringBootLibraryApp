@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dodaj książkę do biblioteki</title>
-    <link rel="Stylesheet" href="style.css" type="text/css"/>
+    <link rel="Stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body class="form_exe">
 
-    <h1 >Witam w aplikacji biblioteki domowej! </h1>
+    <h1>Witam w aplikacji biblioteki domowej! </h1>
 
     <nav>
         <a href="index.html">Strona Główna</a>
-        <a href="#">Przeglądaj</a>
+        <a href="books.html">Przeglądaj</a>
         <a href="#">Dodaj książkę</a>
         <a href="new_account.html">Zarejestruj się</a>
         <a href="#">Zaloguj się</a>
@@ -24,13 +24,13 @@
     </nav>
 
     <br>
-    
+
     <h3 class="h_form">Dodaj książkę</h3>
-    <form class="form" action="skrypt_book.php" method="POST" enctype="multipart/form-data" autocomplete="on">
+    <form id="foo" class="form" action="skrypt_book.php" method="POST" enctype="multipart/form-data" autocomplete="on">
         <fieldset>
             <legend>Dane ksiązki</legend>
             <label for="tytul">Tytuł książki</label>
-            <input name="tytul" type="text"  size="12" id="tytul" minlength="3" maxlength="20" required autofocus
+            <input name="tytul" type="text" size="12" id="tytul" minlength="3" maxlength="20" required autofocus
                 placeholder="np. Krzyżacy">
             <br>
             <br>
@@ -44,8 +44,7 @@
             <br>
             <br>
             <label for="kategoria">Kategoria</label>
-            <input type="text" name="kategoria" id="kategoria" minlength="2" required
-                placeholder="np. Komedia">
+            <input type="text" name="kategoria" id="kategoria" minlength="2" required placeholder="np. Komedia">
             <br>
             <br>
             <label for="rok_wydania">Rok wydania</label>
@@ -54,7 +53,7 @@
             <br>
 
         </fieldset>
-        <button type="submit">Zapisz</button> 
+        <button type="submit">Zapisz</button>
         <button type="reset">Wypełnij ponownie</button>
     </form>
 </body>
