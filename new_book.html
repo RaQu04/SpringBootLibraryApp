@@ -24,13 +24,13 @@
     </nav>
 
     <br>
-
+    
     <h3 class="h_form">Dodaj książkę</h3>
-    <form class="form" action="skrypt.php" method="post" enctype="multipart/form-data" autocomplete="on">
+    <form class="form" action="skrypt_book.php" method="POST" enctype="multipart/form-data" autocomplete="on">
         <fieldset>
             <legend>Dane ksiązki</legend>
             <label for="tytul">Tytuł książki</label>
-            <input type="text" size="12" id="tytul" minlength="3" maxlength="20" required autofocus
+            <input name="tytul" type="text"  size="12" id="tytul" minlength="3" maxlength="20" required autofocus
                 placeholder="np. Krzyżacy">
             <br>
             <br>
@@ -54,7 +54,7 @@
             <br>
 
         </fieldset>
-        <button type="submit">Zapisz</button>
+        <button type="submit">Zapisz</button> 
         <button type="reset">Wypełnij ponownie</button>
     </form>
 </body>
