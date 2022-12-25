@@ -27,6 +27,7 @@
   <br>
 
   <br>
+  <h3 class="h_form">Przeglądaj ksiązki w tabeli </h3>
 
   <br>
 
@@ -37,18 +38,16 @@
   $query = "SELECT id, tytul, autor, wydawca, kategoria, rok_wydania FROM ksiazki";
   $result = $conn->query($query);
   ?>
-  <center>
   <table class="table_books" border="1" cellspacing="0" cellpadding="10">
     <tr>
-      <th>ID</th>
-      <th>Tytul</th>
-      <th>Autor</th>
-      <th>Wydawca</th>
-      <th>Kategoria</th>
-      <th>Rok wydania</th>
+      <th class="headers">ID</th>
+      <th class="headers">Tytul</th>
+      <th class="headers">Autor</th>
+      <th class="headers">Wydawca</th>
+      <th class="headers">Kategoria</th>
+      <th class="headers">Rok wydania</th>
 
     </tr>
-    </center>
     <?php
     if ($result->num_rows > 0) {
       $sn = 1;
