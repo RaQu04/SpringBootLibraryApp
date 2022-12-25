@@ -15,11 +15,11 @@ th, td {
   width: 40%;
 }
 
-#table_books{
+.table_books{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 100%;
 }
 
 .h_form{
@@ -31,7 +31,6 @@ th, td {
 
 nav {
   margin: 27px auto 0;
-
   position: relative;
   width: 80%;
   height: 50px;
@@ -90,7 +89,7 @@ a:nth-child(1):hover~.animation {
   background-color: #1abc9c;
 }
 
-nav .start-about,
+nav .start-books,
 a:nth-child(2):hover~.animation {
   width: 20%;
   left: 20%;
@@ -106,7 +105,7 @@ a:nth-child(3):hover~.animation {
 
 nav .start-portefolio,
 a:nth-child(4):hover~.animation {
-  width: 20%x;
+  width: 20%;
   left: 60%;
   background-color: #9b59b6;
 }
@@ -155,5 +154,3 @@ span {
   margin-right: auto;
   width: 80%;
 }
-
-;

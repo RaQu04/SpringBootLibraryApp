@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Domowa Biblioteka</title>
   <link rel="Stylesheet" href="style.css" type="text/css" />
-  <script src="script.js"></script>
+
 </head>
 
-<body>
+<body class="form_exe">
   <h1>Witam w aplikacji biblioteki domowej! </h1>
 
   <nav>
@@ -18,14 +18,13 @@
     <a href="books.php">Przeglądaj</a>
     <a href="new_book.html">Dodaj książkę</a>
     <a href="new_account.html">Zarejestruj się</a>
-    <a href="#">Zaloguj się</a>
-    <div class="animation start-home"></div>
+    <a href="new_account.html">Zaloguj się</a>
+    <div class="animation start-about"></div>
 
   </nav>
 
   <br>
   <br>
-  <img class="center" src="src/library.jpg" alt="Photography of library">
 
   <br>
 
@@ -38,16 +37,18 @@
   $query = "SELECT id, tytul, autor, wydawca, kategoria, rok_wydania FROM ksiazki";
   $result = $conn->query($query);
   ?>
-  <table id="table_books" border="1" cellspacing="0" cellpadding="10">
+  <center>
+  <table class="table_books" border="1" cellspacing="0" cellpadding="10">
     <tr>
       <th>ID</th>
       <th>Tytul</th>
       <th>Autor</th>
       <th>Wydawca</th>
-      <th>Kategoria No</th>
+      <th>Kategoria</th>
       <th>Rok wydania</th>
 
     </tr>
+    </center>
     <?php
     if ($result->num_rows > 0) {
       $sn = 1;
@@ -71,9 +72,6 @@
 
       <?php } ?>
   </table>
-
- 
-  
- </body>
+</body>
 
 </html>
