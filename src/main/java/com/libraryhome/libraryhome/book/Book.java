@@ -19,5 +19,6 @@ public class Book implements Serializable {
     private String publisher;
     @Enumerated(EnumType.STRING)
     private Status status;
+    private String bookNumber;
 
 }
