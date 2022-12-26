@@ -1,12 +1,11 @@
-package com.libraryhome.libraryhome.services;
+package com.libraryhome.libraryhome.book;
 
 import com.libraryhome.libraryhome.book.Book;
-import com.libraryhome.libraryhome.exception.UserNotFoundException;
-import com.libraryhome.libraryhome.repository.BookRepository;
+import com.libraryhome.libraryhome.book.UserNotFoundException;
+import com.libraryhome.libraryhome.book.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.List;
 import java.util.UUID;
 

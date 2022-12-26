@@ -1,4 +1,4 @@
-package com.libraryhome.libraryhome.repository;
+package com.libraryhome.libraryhome.book;
 
 import com.libraryhome.libraryhome.book.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
