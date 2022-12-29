@@ -1,8 +1,5 @@
 package com.libraryhome.libraryhome.book;
 
-import com.libraryhome.libraryhome.book.Book;
-import com.libraryhome.libraryhome.book.UserNotFoundException;
-import com.libraryhome.libraryhome.book.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +30,7 @@ public class BookService {
 
     public Book findBookById(Long id){
         return bookRepository.findBookById(id)
-                .orElseThrow(() -> new UserNotFoundException("User by id: " + id + "was not found"));
+                .orElseThrow(() -> new BookNotFoundException("User by id: " + id + "was not found"));
     }
 
     public void deleteBook(Long id){
