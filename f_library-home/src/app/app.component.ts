@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Book } from './book';
-import { BookService } from './book.service';
+import { Book } from './book/book';
+import { BookService } from './book/book.service';
 
 @Component({
   selector: 'app-root',
