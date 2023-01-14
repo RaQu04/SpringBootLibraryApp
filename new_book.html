@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dodaj książkę do biblioteki</title>
     <link rel="Stylesheet" href="style.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js" defer="defer"></script>
+    <script src="script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 </head>
 
 <body class="form_exe">
@@ -16,7 +20,7 @@
     <nav>
         <a href="index.html">Strona Główna</a>
         <a href="books.php">Przeglądaj</a>
-        <a href="#">Dodaj książkę</a>
+        <a href="new_book.html">Dodaj książkę</a>
         <a href="new_account.html">Zarejestruj się</a>
         <a href="new_account.html">Zaloguj się</a>
         <div class="animation start-blog"></div>
@@ -24,9 +28,9 @@
     </nav>
 
     <br>
-
+    <!-- action="skrypt_book.php" method="POST" -->
     <h3 class="h_form">Dodaj książkę</h3>
-    <form id="foo" class="form" action="skrypt_book.php" method="POST" enctype="multipart/form-data" autocomplete="on">
+    <form id="foo" class="form" enctype="multipart/form-data" autocomplete="on">
         <fieldset>
             <legend>Dane ksiązki</legend>
             <label for="tytul">Tytuł książki</label>
@@ -53,13 +57,47 @@
             <br>
 
         </fieldset>
-        <button type="submit">Zapisz</button>
+        <button id="submit" type="submit">Zapisz</button>
         <button type="reset">Wypełnij ponownie</button>
     </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#submit').click(function () {
+                var f_tytul = $('#tytul').val();
+                var f_autor = $('#autor').val();
+                var f_wydawca = $('#wydawca').val();
+                var f_kategoria = $('#kategoria').val();
+                var f_rok_wydania = $('#rok_wydania').val();
+                console.log(f_autor);
+                $.ajax({
+                    url: 'skrypt_book.php',
+                    method: 'POST',
+                    data: {
+                        autor: f_autor,
+                        wydawca: f_wydawca,
+                        kategoria: f_kategoria,
+                        rok_wydania: f_rok_wydania,
+                        tytul: f_tytul
+                    },
+                    success: function (msg) {
+                        // alert('Correct');
+                        console.log('sukces');
+                    },
+                    error: function (msg) {
+                        // alert('Error');
+                        console.log('error');
+
+                    }
+                });
+            })
+        });
+    </script>
+
     <div id="image_book">
         <img src="src/book-in-library-with-open-textbook.jpg" alt="Photo of books" width="700" height="300">
     </div>
-    
+
 </body>
 
 </html>

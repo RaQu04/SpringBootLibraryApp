@@ -4,14 +4,7 @@
 {
     require_once "dbconnect.php";
     $conn = mysqli_connect($host, $user, $pass, $db) or die("Błąd połączenia");
-    // if(!$conn)
-    // {
-    //     exit();
-    // }
-    // else
-    // {
-    //     echo "ok";
-    // }
+
   
     $autor = $_POST['autor'];
     $wydawca = $_POST['wydawca'];
